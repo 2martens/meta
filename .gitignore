@@ -1,0 +1,9 @@
+*.pdf
+*.aux
+*.synctex.gz
+*.nav
+*.toc
+*.out
+*.gz
+*.tar
+*.snm
