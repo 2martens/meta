@@ -7,11 +7,8 @@ The result of that is then clustered and organized into groups of features.
 
 Content:
 
-* Brainstorming[1]
-* Clustering[2]
-
-[1]: #brainstorming
-[2]: #clustering
+* [Brainstorming](Functionality.md#brainstorming)
+* [Clustering](Functionality.md#clustering)
 
 ## Brainstorming
 
