@@ -5,6 +5,14 @@ This page covers the functionality of the web platform.
 First we have a brainstorming on the functionality of the web platform.
 The result of that is then clustered and organized into groups of features.
 
+Content:
+
+* Brainstorming[1]
+* Clustering[2]
+
+[1]: #brainstorming
+[2]: #clustering
+
 ## Brainstorming
 
 Functionality (no specific order):
@@ -19,8 +27,8 @@ Functionality (no specific order):
         * ratings of users
         * certified label (tested to ensure compatibility)
 * change visual appearance with a click
-   * user can select favourite style out of available styles
-   * admin can set a style as default style
+    * user can select favourite style out of available styles
+    * admin can set a style as default style
 * create and edit your own styles
     * style variables for editing in editor
     * LESS support
@@ -108,6 +116,16 @@ Functionality (no specific order):
     * create new groups limited to this project
         * allows for separate projects with different user base
         * can be made globally accessible later on
+* option support
+    * packages can introduce configuration options that can be modified by
+      the admin
+    * these options are available throughout the defining package and
+      packages that require that package
+    * support for dynamically set configuration of lower packages
+        * packages below the application level can't provide options by
+          themselves, but they might expose a semantic configuration
+        * it should be possible to set this configuration dynamically from 
+          a package in a higher level
 * ACP
     * configuring and controlling via graphical user interface
     * just ONE kind of accessing the underlying functionality
@@ -177,3 +195,81 @@ These levels are available:
     * they have many dependencies to lower level features
     
 TODO
+The features sorted by level:
+
+Core
+
+* required 3rdParty javascript libraries
+    * jQuery
+    * jQueryUI
+    * (Backbone)
+    * (Twitter Bootstrap)
+* offers different CDNs plus local version
+* object type API
+    * there can be different object types
+    * useful when the same code should be applied to different types of 
+      content
+    * provides a way to create a object type definition, which defines an
+      object type
+
+Utility
+
+* support for uploads
+    * including ROLE rights (very versatile)
+    * templates for general uploads and attachments
+    * API to differentiate between upload modes
+* media support
+    * media provider (oembed and simple share link)
+    * API to retrieve HTML for given share link/HTML5 include link
+* multiple languages
+    * API to save contents of any kind
+    * support for different object types
+    * API to translate contents automatically to selected language
+
+High-End API
+
+* package system
+    * API for installing, updating, deleting packages
+    * provides API for package servers
+    * provides functionality to filter for stability
+    * provides validation API
+        * validates package archives (can be used to check if own package
+          is valid, before applying it to a package server)
+        * allows validation of to-be-installed packages
+    * provides API to search for updated packages
+    * each package consists of one or more bundles, which are handled internally
+        * the user only sees packages
+        * the system handles the bundles and updates them via Composer
+        * the package itself is only some xml files used for transporting 
+          meta data
+        * a package can be updated, when one of it's bundles is updated
+* style system
+    * LESS compiler (lessc.inc.php)
+    * compiler
+        * style variables are added prior to each compile process
+        * mixins are added prior to each compile process
+    * provides default style that uses CSS classes
+    * provides API to retrieve stylesheet of given style
+    * support for CDNs
+        * configure a CDN and the link to the stylesheet is changed
+    * FontAwesome for icons
+        * wrapper classes of FontAwesome classes to include them in the
+          unified CSS class policy
+    * support for css wrapper
+        * provide API to add wrappers for various CSS themes (Bootstrap)
+        * ships with Bootstrap wrapper by default
+        * allows usage of a wide range of themes without touching templates
+        * external themes can be updated easily
+    * support for creating, updating, deleting styles
+        * styles can be original (using style variables) or external
+        * external: style can select installed wrapper or install own
+          wrapper and provide external CSS theme
+    * support for converting themes
+        * if wrapper is installed, external CSS file is copied and then
+          modified, whereas the external CSS classes are replaced with
+          our CSS classes 
+        * this converted file is then included as stylesheet
+* option system
+    * API for saving and editing options
+    * provides way to dynamically edit configuration of bundles
+    * provides API to check for certain options
