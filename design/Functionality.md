@@ -11,7 +11,7 @@ Content:
 * [Clustering](Functionality.md#clustering)
     * [Core](Functionality.md#core)
     * [Utility](Functionality.md#utility)
-    * [High-End API](Functionality.md#high-end_api)
+    * [High-End API](Functionality.md#high-end-api)
 
 ## Brainstorming
 
