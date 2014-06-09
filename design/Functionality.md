@@ -12,6 +12,7 @@ Content:
     * [Core](Functionality.md#core)
     * [Utility](Functionality.md#utility)
     * [High-End API](Functionality.md#high-end-api)
+    * [Application](Functionality.md#application)
 
 ## Brainstorming
 
@@ -175,6 +176,20 @@ Functionality (no specific order):
     * Console command which can be used for creating real cron task
     * underlying system for packages to register their regular tasks
     * option to call cronjobs even without real cron
+* logging
+    * exceptions are logged
+    * can be viewed later
+    * configuration actions can be logged
+* search
+    * support for various content types
+* sanction support
+    * users can receive negative points
+    * after a certain threshold is met a sanction is applied
+    * warnings before sanctions
+    * manual application as well
+* Conversations
+    * users can communicate in private with each other
+    * between two or more users
 
 ## Clustering
 
@@ -194,8 +209,6 @@ These levels are available:
 * High-End API level
     * these features utilize many features below their level
     * they don't provide an accessible frontend/backend
-        * they can provide controllers and templates which can then be
-          accessed from higher level features
     * these features are the defining features of the web platform
 * Application level
     * these features have accessible frontend/backend
@@ -237,6 +250,8 @@ The features sorted by level:
 
 * package system
     * API for installing, updating, deleting packages
+        * allows PIPs (package installation plugins) that are executed
+          during installation/
     * provides API for package servers
     * provides functionality to filter for stability
     * provides validation API
@@ -329,9 +344,127 @@ The features sorted by level:
           supported by default, more blocks might be supported based on
           chosen style)
     * provides API for retrieving menus and items
+    * provides API for adding/retrieving/removing menu item provider
 * cronjob system
     * provides API for adding/updating/deleting cronjobs
     * provides API for calling cronjobs
         * Console command
         * service
     * provides API for (de-)activating cronjobs 
+* search system
+    * provides API to add/remove search provider
+
+### Application
+
+* ACP
+    * layout based on Bootstrap default theme
+    * menu for accessing the various areas (using menu system)
+    * provides these areas by default:
+        * system
+            * option configuration (uses option system)
+            * module configuration (uses option system)
+            * package management (uses package system)
+                * including installation process (visual part)
+            * project management (uses project system)
+            * cronjob management (uses cronjob system)
+            * error/exception log (uses monolog)
+            * empty cache (uses filesystem)
+        * users and groups
+            * user management (uses user & group system)
+            * group management (uses user & group system)
+            * email all users/users of group (uses user & group system and
+              swiftmailer)
+        * appearance
+            * style management (uses style system)
+                * add new styles with online editor
+            * language management
+        * content
+            * upload management (uses upload system)
+        * frontend
+            * dashboard management (uses frontend package)
+    * provides API to add new menu items with corresponding routes
+* Frontend
+    * login (uses user & group system)
+        * provides public REST API for user validation (could be used to
+          provide OpenID)
+    * registration (uses user & group system)
+    * search (uses search system)
+    * members list (uses user & group system)
+    * user profile
+        * recent activities
+        * wall
+    * UCP
+        * privacy settings
+            * email visibility (by default not visible)
+            * who can see what (all, none, people user follows, org members)
+            * wall rights (who can write, view entries)
+        * group management
+            * add new user groups
+            * manage groups in which user is leader
+    * dashboard
+        * provides API for adding/retrieving dashboard boxes
+    * JS utilities
+        * sidebar support
+    * top menu
+        * provides API for adding new items
+* Community (very high level API, frontend/ACP inclusion done by frontend/ACP)
+    * notification support
+        * provides API for triggering notifications
+        * interfaces with UCP settings to allow users to set up their
+          notification settings
+        * uses swiftmailer for email notifications
+        * provides API to retrieve notifications for user
+    * moderation support
+        * provides API for adding moderation tasks
+            * supports different types of tasks (comment approval, content activation, user bans, etc.)
+        * moderation queue
+            * priority queue (items with more reports will end up higher)
+            * filter support
+                * only show tasks for areas in which moderator is responsible
+        * logging of moderation actions (using monolog)
+        * adds MCP to top menu
+    * poll support
+        * provides API to evaluate results (easy polls only)
+            * creator can see results
+            * based upon group rights other users can see results as well
+        * provides API to build polls
+        * provides API to add/edit/remove polls
+            * can be attached to object (e.g. forum thread)
+            * can be independent (accessible via route)
+    * sanction and warning support
+        * sanction and warning behaviour regarding removing bad points
+          can be configured but is described below with the provided
+          sensible defaults
+        * sending the notification cannot be configured easily as the user
+          should know why he got bad points and what exactly was the source
+        * provides API to define new sanctions
+            * default pool
+                * timed ban (ban as in user can't login)
+                * permanent ban (can be taken back and should only be used
+                  if necessary)
+                * no signature (timed)
+                * no new user groups (timed)
+            * specify user group that can apply sanction (if not automated)
+            * automated sanction or manual (can this sanction be applied
+              automatically?)
+                * define minimum bad points to trigger sanction
+        * provides API to trigger sanction or warning
+            * after triggering a sanction the bad points responsible for
+              triggering the sanction are marked for removal
+            * these points will be removed if sanction is lifted and no
+              new sanctioned offense happened
+        * provides API to define new warnings
+        * provides API to add bad points to user account
+            * requires reason
+            * after each such call a notification for the affected user
+              is triggered
+                * who approved it
+                * what is the reason
+                * link to object in question (e.g. forum post, comment)
+        * provides API to retrieve bad points of user
+        * integrates into ACP, MCP
+    * conversation support
+        * provides API to add/remove conversations
+        * provides API to add/edit new conversation entries
+        * provides API to add new user to conversation
+        * provides UCP settings for notification settings
