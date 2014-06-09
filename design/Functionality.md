@@ -9,6 +9,9 @@ Content:
 
 * [Brainstorming](Functionality.md#brainstorming)
 * [Clustering](Functionality.md#clustering)
+    * [Core](Functionality.md#core)
+    * [Utility](Functionality.md#utility)
+    * [High-End API](Functionality.md#high-end_api)
 
 ## Brainstorming
 
@@ -202,7 +205,7 @@ These levels are available:
 TODO
 The features sorted by level:
 
-Core
+### Core
 
 * required 3rdParty javascript libraries
     * jQuery
@@ -217,7 +220,7 @@ Core
     * provides a way to create a object type definition, which defines an
       object type
 
-Utility
+### Utility
 
 * support for uploads
     * templates for general uploads and attachments
@@ -230,7 +233,7 @@ Utility
     * support for different object types
     * API to translate contents automatically to selected language
 
-High-End API
+### High-End API
 
 * package system
     * API for installing, updating, deleting packages
