@@ -28,11 +28,13 @@ Functionality (no specific order):
     * admin can set a style as default style
 * create and edit your own styles
     * style variables for editing in editor
+        * these are basically the Bootstrap LESS variables
     * LESS support
-    * converter for WCF 2.x compatible styles
-    * converter for external styles (e.g. Bootstrap)
-        * mapping of external CSS classes to CSS classes of web platform
-        * copy and then replace external classes with own classes
+    * the own styles are basically just a custom Bootstrap theme
+        * the variables and mixins are injected by the compiler
+    * common policy for general structure
+        * styles shouldn't add new classes
+        * semantic classes shouldn't get a new meaning
 * user and group management
     * login/registration
         * support for LDAP
@@ -245,27 +247,13 @@ High-End API
     * compiler
         * style variables are added prior to each compile process
         * mixins are added prior to each compile process
-    * provides default style that uses CSS classes
     * provides API to retrieve stylesheet of given style
     * support for CDNs
         * configure a CDN and the link to the stylesheet is changed
     * FontAwesome for icons
-        * wrapper classes of FontAwesome classes to include them in the
-          unified CSS class policy
-    * support for css wrapper
-        * provide API to add wrappers for various CSS themes (Bootstrap)
-        * ships with Bootstrap wrapper by default
-        * allows usage of a wide range of themes without touching templates
-        * external themes can be updated easily
-    * support for creating, updating, deleting styles
-        * styles can be original (using style variables) or external
-        * external: style can select installed wrapper or install own
-          wrapper and provide external CSS theme
-    * support for converting themes
-        * if wrapper is installed, external CSS file is copied and then
-          modified, whereas the external CSS classes are replaced with
-          our CSS classes 
-        * this converted file is then included as stylesheet
+        * semantic css classes for icons
+    * default semantic css classes based on Bootstrap
+    * provides default style that uses default Bootstrap colors
 * option system
     * API for saving and editing options
     * provides way to dynamically edit configuration of bundles
