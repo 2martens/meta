@@ -131,7 +131,7 @@ Functionality (no specific order):
     * just ONE kind of accessing the underlying functionality
 * Console
     * access to some functionality (mostly administrative tasks) that
-      doesn't require much user input
+      don't require user input
 * Dashboard
     * a place in frontend where latest activity across the project can
       be seen
