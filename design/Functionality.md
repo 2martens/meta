@@ -215,7 +215,6 @@ These levels are available:
     * they are integral part of the web platform and cannot be used separately
     * they have many dependencies to lower level features
     
-TODO
 The features sorted by level:
 
 ### Core
