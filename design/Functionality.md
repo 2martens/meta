@@ -76,6 +76,7 @@ Functionality (no specific order):
             * articles
         * latest activity from followed users
     * following other users
+    * activity points (measurement for activity)
 * multiple languages
     * support for multilingual user generated content
     * switching language as guest with a simple click
@@ -166,6 +167,11 @@ Functionality (no specific order):
     * global top menu (with UCP, notifications, MCP, link to ACP, etc.)
     * support for multi-level menus
         * the specific visual representation depends on style
+* cronjobs
+    * actions that are performed regularly without user input
+    * Console command which can be used for creating real cron task
+    * underlying system for packages to register their regular tasks
+    * option to call cronjobs even without real cron
 
 ## Clustering
 
@@ -214,7 +220,6 @@ Core
 Utility
 
 * support for uploads
-    * including ROLE rights (very versatile)
     * templates for general uploads and attachments
     * API to differentiate between upload modes
 * media support
@@ -254,7 +259,76 @@ High-End API
         * semantic css classes for icons
     * default semantic css classes based on Bootstrap
     * provides default style that uses default Bootstrap colors
+    * each style provides a layout HTML that is inserted into a layout.twig
+        * this layout HTML has to contain specific blocks (each empty)
+        * it can contain additional blocks (must be documented to allow
+          usage by others)
 * option system
     * API for saving and editing options
     * provides way to dynamically edit configuration of bundles
     * provides API to check for certain options
+* project system
+    * provides API to create and delete projects
+        * creates skeleton tables in a project database for all selected
+          applications
+        * API to register more things that can be saved per-project
+    * handles multiple database connections
+    * provides API to retrieve current project
+    * provides abstract controller that saves information about current
+      project in session (valid for one request only)
+* user and group system
+    * provides API for adding group options (e.g package installation)
+        * supports wrapper for ROLE_* rights (boolean group options)
+        * many more kinds of group options (integer, string, etc.)
+    * provides API for checking/retrieving group options (the non-ROLE ones)
+        * the ROLE options are already covered by default Symfony
+    * provides API for assigning users to groups
+    * provides API for creating/editing/deleting groups and users
+        * groups:
+            * user-created groups
+            * admin-created groups
+        * users
+    * supports various ways of registration/login
+        * LDAP
+        * OpenID (e.g. GitHub, Facebook)
+        * registration form
+            * no activation
+            * email activation
+            * admin activation
+    * password hashing
+        * bcrypt
+        * double salted hash
+    * credentials validation API
+        * can be used for all sorts of validation
+        * by default used for user validation
+    * provides API to add more elements to UCP
+    * uses option system to save user settings
+        * predetermined domain used for these settings
+        * adding/removal of options directly through options system
+    * user profile
+        * API for adding new segments of the profile
+        * API for retrieving those segments
+    * API for adding/retrieving/removing activity
+    * API for adding/retrieving/removing activity points
+    * API for following users
+        * retrieve who follows which user
+* menu system
+    * provides API for adding/updating/deleting menu items
+        * supports different menu item types
+        * each saved menu item must provide a way to retrieve a valid route
+          to access it
+        * menu items can be actually sub menus
+            * one sub menu level supported by default, more could be possible
+              based on the chosen style
+    * provides API for adding/updating/deleting menus
+        * menus are abstract container for all types of menu items
+        * each menu gets assigned a twig block name (headerMenu and footerMenu
+          supported by default, more blocks might be supported based on
+          chosen style)
+    * provides API for retrieving menus and items
+* cronjob system
+    * provides API for adding/updating/deleting cronjobs
+    * provides API for calling cronjobs
+        * Console command
+        * service
+    * provides API for (de-)activating cronjobs 
