@@ -244,6 +244,11 @@ The features sorted by level:
     * API to save contents of any kind
     * support for different object types
     * API to translate contents automatically to selected language
+* content system
+    * message parser
+    * bbcode support
+    * HTML support
+    * Redactor (OEM license required)
 
 ### High-End API
 
