@@ -13,7 +13,8 @@ You just came from the web-platform repo and want to contribute to the
 first two phases? Great. Even if you don't came from there and want to
 contribute, you are right here.
 
-Just head over to the CONTRIBUTING.md file for detailed information.
+Just head over to the [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed 
+information.
 
 Issues
 ------

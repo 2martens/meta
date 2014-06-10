@@ -5,7 +5,7 @@ guidelines and instructions.
 
 General Preparation (applies to all participation):
 
-* read through the [Functionality.md](Functionality.md) file to find out
+* read through the [Functionality.md](design/Functionality.md) file to find out
   about the scope of the project
 
 General Rules (applies to all participation):
@@ -18,7 +18,7 @@ General Rules (applies to all participation):
 ## Designing the architecture (currently)
 Preparation:
 
-* read through the [Bundles.md](Bundles.md) file to examine the current
+* read through the [Bundles.md](design/Bundles.md) file to examine the current
   status of bundle definition
 * take a look into the wiki, which is used in this phase to discuss the 
   definition
@@ -32,7 +32,7 @@ Action:
 ## Defining the general abstract API (currently)
 Preparation:
 
-* read through the [API.md](API.md) file to examine the current
+* read through the [API.md](design/API.md) file to examine the current
   status of API definition
 * take a look into the wiki, which is used in this phase to discuss the 
   definition
@@ -44,7 +44,7 @@ Action:
 ## Determining 3rdParty dependencies (next)
 Preparation:
 
-* read through the [Bundles.md](Bundles.md) file to examine the bundle 
+* read through the [Bundles.md](design/Bundles.md) file to examine the bundle 
   definition
 
 Action:
@@ -57,7 +57,7 @@ Action:
 ## Designing the bundle API (next)
 Preparation:
 
-* read through the [Bundles.md](Bundles.md) file to examine the bundle 
+* read through the [Bundles.md](design/Bundles.md) file to examine the bundle 
   definition
   
 Action:
@@ -68,8 +68,8 @@ Action:
 ## Write contribution part of documentation (next)
 Preparation:
 
-* read through the [API.md](API.md) file to examine general abstract API
-* read through the [Bundles.md](Bundles.md) file to examine bundle definition
+* read through the [API.md](design/API.md) file to examine general abstract API
+* read through the [Bundles.md](design/Bundles.md) file to examine bundle definition
   including public API
 * head over to web-platform-docs repo and read CONTRIBUTING.md
 
