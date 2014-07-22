@@ -134,6 +134,17 @@
 		\centering Why don't we use existing software?
 	\end{frame}
 	
+	\begin{frame}{Comparisons}
+		All these 3rdParty things are nice and such but...
+		\begin{itemize}
+			 \item<2-> they are not designed to interoperate seamlessly
+			 \item<3-> they are somewhat inflexible
+			 \item<4-> they don't fulfill our requirements
+		\end{itemize}
+		
+		\only<5->{If we have to invest time to make existing things working with our ideas, we might just as well do them from scratch exactly how we deem them necessary.}
+	\end{frame}
+	
 	\begin{frame}{Common Policy}
 		\begin{itemize}
 			\item seperate bundles
@@ -146,8 +157,60 @@
 			\item Core-level (e.g. common non-PHP 3rdParty libraries)
 			\item Basic utility bundles (reusable outside the web-platform, few dependencies, e.g. UploadBundle)
 			\item High-level bundles (bundles providing core features like package system)
-			\item Application-level bundles (ACP) 
+			\item Application-level bundles (e.g. ACP, moderation functionality) 
 		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Common Policy}
+		Common coding style beyond CodeSniffer
+		\begin{itemize}
+			\item bundles communicate via disclosed APIs only
+			\item no assumptions on the input that are not explicitely stated in API documentation
+			\item no primitive parameters in public APIs (instead value classes which encapsulate one value and ensure it's integrity and validity, e.g. Username, Password, Address)
+			\item explicit classes instead of array for everything (e.g. Queue, List, HashMap)
+		\end{itemize}
+		This common coding style ensures maximum maintainability and reduces the potential of errors (strings in unexpected and therefore unchecked variations, arrays in unexpected structure (the expected structure could be forgotten in the API documentation)).
+	\end{frame}
+	
+	\subsection{Opportunities}
+	
+	\begin{frame}{Community}
+		Participation
+		\begin{itemize}
+			\item help shaping the platform (design)
+			\item help forming the platform (draft)
+			\item help making the platform (implementation)
+			\item help testing the platform (quality assurance)
+			\item help promoting the platform (marketing)
+		\end{itemize}
+		
+		Be a part in developing a ground-breaking web platform.
+	\end{frame}
+	
+	\begin{frame}{Innovations}
+		The architecture allows for faster innovations without breaking existing applications.
+		\begin{itemize}
+			\item One cool feature that is general-purpose for all web applications? Make it and let every application profit from it.
+			\item A better way for user security appears? Implement it without breaking the user base.
+			\item You write a better application than existing ones? Users can switch without data loss (content policy).
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Common Content policy}
+		The web platform enforces a strict common content policy. This means that the core data of applications is inter-compatible without loss.
+		
+		\begin{itemize}
+			\item standardized data storage for several content types (e.g. forum categories, boards, threads, posts and forum hierarchy)
+			\item leaves room for diversity without putting the admin in a vendor lock-in (staying with current application or lose all or parts of the data)
+			\item allows for true competition where the data has no influence
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Game Integration}
+		Due to it's modular nature the web platform could even support integration into an in-game and in-lore browser (as in HTTPS requests from the game to the website running on the platform). This would allow for including real websites into in-lore ``internet''s.
+	\end{frame}
+	
+	\section{Future}
+	\begin{frame}{Future}
+		\centering Will this platform be finished before Star Citizen goes live?
 	\end{frame}
 \end{document}
 
