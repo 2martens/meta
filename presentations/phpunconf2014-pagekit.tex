@@ -1,0 +1,143 @@
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage{paralist}
+%\useoutertheme{infolines} 
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usetheme{Warsaw}
+\usecolortheme{crane}
+\pagenumbering{arabic}
+\def\thesection{\arabic{section})}
+\def\thesubsection{\alph{subsection})}
+\def\thesubsubsection{(\roman{subsubsection})}
+\setbeamertemplate{navigation symbols}{}
+\graphicspath{ {src/} {/home/jim/Pictures/} }
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygray},    % comment style
+  deletekeywords={},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=PHP,                 % the language of the code
+  morekeywords={class, function, return, protected, public, private, const, static, new, extends, namespace, null},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mygreen},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\hypersetup{
+	pdfauthor=Jim Martens,
+	pdfstartview=Fit
+}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\raggedleft \insertframenumber\,/\,\inserttotalframenumber\;}
+
+\begin{document}
+\author{Jim 2martens}
+\title{Qual der Wahl - oder developer last}
+\date{September 2014}
+
+	% Introduction
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	\begin{frame}{Agenda}
+		\tableofcontents
+	\end{frame}
+	
+	\section{Stand der Technik}
+	\begin{frame}{Stand der Technik!}
+		\only<1-4> {		
+		\begin{itemize}
+			\item<1-4> WordPress
+			\item<2-4> Joomla
+			\item<3-4> Drupal
+			\item<4> Typo3
+		\end{itemize}
+		}
+		\only<5-> {
+		\begin{itemize}
+			\item<5-> MediaWiki
+			\item<6-> vBulletin
+			\item<7-> WoltLab Burning Board
+			\item<8-> phpBB
+			\item<9-> Vanilla
+		\end{itemize}
+		}
+	\end{frame}
+	\begin{frame}{Stand der Technik?}
+		\begin{itemize}
+			\item<+-> unübersichtliche Codebase
+			\item<+-> Insellösungen
+			\item<+-> Inkompatibilitäten
+			\item<+-> Synchronisation notwendig
+			\item<+-> mangelnde Testbarkeit
+		\end{itemize}
+	\end{frame}
+
+	\section{Ansatz}	
+	\begin{frame}{Anforderungen}
+		\begin{itemize}
+			\item einmalige Implementation von anwendungsunspezifischen Funktionen (AUF)
+			\item saubere, modulare und damit gesunde Grundstruktur (GG)
+			\item einfache Erweiterbarkeit
+			\item leicht austauschbare Themes
+			\item Paketmanagement
+			\item ...
+		\end{itemize}
+		Kurzum: \href{https://github.com/2martens/meta/blob/master/design/Functionality.md}{github.com/2martens/meta/design/Functionality.md}
+	\end{frame}
+	
+	\begin{frame}{Probleme}
+		\begin{itemize}
+			\item Wo anfangen?
+			\item Zu umfangreich?
+			\item Nicht machbar? (sonst gäb es das wohl schon...)
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Ansatz}
+		\centering
+		Gibt es sowas wirklich nicht?
+		
+		\only<2-> {Doch und zwar \href{http://www.pagekit.com}{Pagekit} von Yoothemes}
+	\end{frame}
+	\begin{frame}{Ansatz}
+		\begin{itemize}
+			\item unter MIT-License
+			\item nutzt Symfony Komponenten
+			\item Developer first
+			\item gute Ausgangsbasis für weitergehende Funktionalität
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Ausblick}
+		
+	\end{frame}
+\end{document}
+
