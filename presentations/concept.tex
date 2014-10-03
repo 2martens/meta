@@ -1,3 +1,4 @@
+\RequirePackage{pdf14}
 \documentclass{beamer}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -57,9 +58,9 @@
 	\raggedleft \insertframenumber\,/\,\inserttotalframenumber\;}
 
 \begin{document}
-\author{Jim 2martens, 2martens Development Group}
+\author{Jim 2martens}
 \title{2martens Web Platform}
-\date{June 2014}
+\date{October 2014}
 
 	% Introduction
 	\begin{frame}
@@ -148,16 +149,15 @@
 	\begin{frame}{Common Policy}
 		\begin{itemize}
 			\item seperate bundles
-			\item common core bundle for shared code
+			\item common core bundle
 			\item combined functionality
 		\end{itemize}
 		
-		Multiple levels of bundles:
+		Bundles as vertical slices:
 		\begin{itemize}
-			\item Core-level (e.g. common non-PHP 3rdParty libraries)
-			\item Basic utility bundles (reusable outside the web-platform, few dependencies, e.g. UploadBundle)
-			\item High-level bundles (bundles providing core features like package system)
-			\item Application-level bundles (e.g. ACP, moderation functionality) 
+			\item Core bundle (barebone version - everything to extend it)
+			\item Functionality bundles (additional application-independent features like rating system, poll support, attachment support)
+			\item Application bundles (complete applications - require only core but automatically integrate new functionality)
 		\end{itemize}
 	\end{frame}
 	
