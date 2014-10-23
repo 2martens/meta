@@ -190,6 +190,14 @@ Functionality (no specific order):
 * Conversations
     * users can communicate in private with each other
     * between two or more users
+* feature type system
+    * packages belong to a certain feature type
+    * packages can define extension points for certain feature types
+    * packages can classify template blocks (e.g. header_system-related, relatedContent)
+    * Examplt: ACP defines a template block in as extension point valid for system-related features
+        * => packages marked as system-related will get their content (that fits to the block) listed there, without any code changes or other requirements
+        * => packages which are not system-related won't get their content there (they wouldn't have suitable content anyway)
+    * packages can declare which part of their code appears in what template block class
 
 ## Clustering
 
@@ -231,6 +239,7 @@ The features sorted by level:
       content
     * provides a way to create a object type definition, which defines an
       object type
+* feature type API
 
 ### Utility
 
