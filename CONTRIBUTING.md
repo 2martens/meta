@@ -15,7 +15,7 @@ General Rules (applies to all participation):
 * vote when asked for it (you just have one vote, don't misuse the system)
 * don't edit pages that are not explicitly allowing it 
 
-## Designing the architecture (currently)
+## Designing the architecture (done)
 Preparation:
 
 * read through the [Bundles.md](design/Bundles.md) file to examine the current
