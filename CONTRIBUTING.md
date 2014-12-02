@@ -41,7 +41,11 @@ Action:
 
 * go to the wiki and participate in the drafts for API definition
 
-## Determining 3rdParty dependencies (next)
+Notes:
+
+* the style system and css classes remain open until further evaluation can be made
+
+## Determining 3rdParty dependencies (currently)
 Preparation:
 
 * read through the [Bundles.md](design/Bundles.md) file to examine the bundle 
