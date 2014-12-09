@@ -58,7 +58,7 @@ Action:
 * if there is a JS requirement, add it to the respective wiki page together
   with version info (if it isn't already in that list)
 
-## Designing the bundle API (next)
+## Designing the bundle API (currently)
 Preparation:
 
 * read through the [Bundles.md](design/Bundles.md) file to examine the bundle 
