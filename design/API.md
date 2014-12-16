@@ -34,7 +34,7 @@ In the following you will see the steps for the installation (user perspective).
 ##### Technical
 
 1. Download the bundle
-2. Adding the bundle to the requirements of the virtual bundle
+2. Adding the bundle to the requirements of the distribution application
 2. Install bundle (composer)
 3. Adding the bundle to the AppKernel file
 3. Finish the installation
