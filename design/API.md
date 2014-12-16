@@ -9,9 +9,11 @@ The system gets this information with a monitored XML file that only contains te
 
 ### Package Installation
 
-#### Virtual bundle
+#### Distribution Application
 
-The distribution will work as a virtual bundle that requires all installed packages. That way we can use Composer even though it can only handle requirements.
+The distribution is an application that requires the web platform bundles itself and 
+all additional packages that can be installed from the ACP. That way we can use Composer 
+even though it can only handle requirements.
 
 #### Installation steps
 
