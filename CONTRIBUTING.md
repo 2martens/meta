@@ -69,7 +69,7 @@ Action:
 * go to the wiki, choose one of the bundles and participate in creating
   the public API
 
-## Write contribution part of documentation (next)
+## Write contribution part of documentation (done)
 Preparation:
 
 * read through the [API.md](design/API.md) file to examine general abstract API
