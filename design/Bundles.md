@@ -260,7 +260,7 @@ This bundle implements the conversation system. It requires the Core and Communi
 * UCP settings for notification settings
 
 ### Interfaces
-* group rightd
+* group rights
 * use package installation plugin to provide notification provider
 
 ## Sanction bundle
