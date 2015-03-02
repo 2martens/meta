@@ -37,10 +37,9 @@ The Core bundle contains all core elements of the platform.
     * API to CRUD search provider
     * API to CRUD search algorithms
 * menu system
-    * API to CRUD menu items
+    * API to CRUD menu locations
     * API to CRUD menus
-    * API to retrieve menus and items
-    * API to CRUD menu item provider
+    * API to build menu locations
 * feature type system
     * API to check feature type (of package/bundle)
 * ACP
