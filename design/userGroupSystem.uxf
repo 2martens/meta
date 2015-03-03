@@ -150,7 +150,7 @@
       <x>450</x>
       <y>500</y>
       <w>100</w>
-      <h>20</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>UserService</panel_attributes>
     <additional_attributes/>
@@ -159,12 +159,12 @@
     <id>Relation</id>
     <coordinates>
       <x>490</x>
-      <y>510</y>
+      <y>520</y>
       <w>30</w>
-      <h>110</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -296,6 +296,28 @@
       <h>30</h>
     </coordinates>
     <panel_attributes>GroupVoter</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>500</y>
+      <w>130</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>260</x>
+      <y>490</y>
+      <w>160</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>OptionTypeInterface</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
