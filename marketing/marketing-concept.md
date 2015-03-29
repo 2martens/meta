@@ -64,7 +64,7 @@ The CMS part of the website must support media posts which embed YouTube videos 
 and above that the standard functionality of a CMS. Most importantly is the easy migration
 to a custom solution later on (the data must be stored as minimalistic as possible).
 Furthermore it must be possible to customize the look of the website in an easy way to represent
-the "corporate indentity" of the 2martens Web Platform. Since the forum might be a different
+the "corporate identity" of the 2martens Web Platform. Since the forum might be a different
 application with a different structure, it must be easy to synchronize the user accounts.
 
 The community part of the website will be a forum and must support the easy customization of
