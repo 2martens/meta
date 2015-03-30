@@ -86,3 +86,39 @@ Technical Details:
 The WBB, WCF and Ultimate CMS will be installed in a subdirectory to keep the main directory
 clean. The request will be rewritten with mod_rewrite to lead them to the sub directory.
 Actual files and directories under the root of 2martens.de will remain accessible.
+
+### Google+
+
+Let's come to the social media profile in the strategy. The Google+ page will be used
+to announce new YouTube videos, post about development progress in general and to stay
+in touch with people.
+
+That is a very general summary of the target for that page. There might also be teasers
+for new features and exclusive first content.
+
+The page has to match the "corporate identity" of the 2martens Web Platform. This means
+the header and the logo will be customized to achieve said goal.
+
+### YouTube
+
+You have read about YouTube videos. Now it's time to go into detail about the concept of
+the channel.
+
+Programs:
+
+* monthly update (a short video that describes the implemented features, development challenges) 
+- starting when visual progress is visible
+* feature description (a video concentrating on one feature) - towards release
+* community feedback (answering questions from YouTube, Google+) - if demand exists
+* reaction videos (to react on important misconceptions) - whenever necessary
+
+Iterative scaling:
+
+These videos mean a lot of content and time. Therefore we won't start at 100%. Just like
+the website, this will be an iterative approach. The first step will be the monthly
+update section, since that is a perfect way for people stay tuned while not participating
+actively. If this section is succesful, we will have a reliable returning fellowship that
+might also go to the forum.
+
+Once we reach a critical quorum of interested people, we can scale this up with other
+segments.
