@@ -78,5 +78,11 @@ After considering many applications, the final decision is presented below.
 
 Software:
 
-* CMS:
-* Forum:
+* CMS: Ultimate CMS - own CMS for WCF 2.1 (currently in testing for release version 1.1)
+* Forum: WoltLab Burning Board - already familiar with and fully functional
+
+Technical Details:
+
+The WBB, WCF and Ultimate CMS will be installed in a subdirectory to keep the main directory
+clean. The request will be rewritten with mod_rewrite to lead them to the sub directory.
+Actual files and directories under the root of 2martens.de will remain accessible.
