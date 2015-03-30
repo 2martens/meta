@@ -122,3 +122,16 @@ might also go to the forum.
 
 Once we reach a critical quorum of interested people, we can scale this up with other
 segments.
+
+### Twitter
+
+Last but not least: Twitter. The Twitter account is something special. It is my personal
+Twitter account and will be used for things aside from the platform. That said, the account
+will be used for announcements of YouTube videos, upcoming presentations and mini-updates
+that don't justify a full news on the website or even a post on the Google+ page.
+
+The news and everything about the platform will be tweeted under #2martensWebPlatform.
+Other people are invited to use this hashtag to discuss the platform.
+
+Since this is my personal account, you will find some political statements there as well
+(like being against current implementation of capitalism, etc.).
