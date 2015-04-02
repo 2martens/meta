@@ -123,6 +123,10 @@ might also go to the forum.
 Once we reach a critical quorum of interested people, we can scale this up with other
 segments.
 
+The very first step is a 5 minute pitch video that introduces people to the 2martens
+Web Platform. This video should be understandable for non-programmers and show already
+WIP footage of the platform.
+
 ### Twitter
 
 Last but not least: Twitter. The Twitter account is something special. It is my personal
