@@ -82,7 +82,7 @@
 	\begin{frame}{Motivation}
 		\begin{itemize}
 			\item it's state-of-the-art
-			\item it's extendable
+			\item it's expandable
 			\item it's functional
 			\item it's modular
 			\item it's testable
@@ -99,13 +99,15 @@
 	
 	\section{Basics}
 	\begin{frame}{Beginning}
-		In the beginning was Symfony2. And it was good. There was Drupal as CMS but no real forum. Nor were there applications that were intercompatible from the get-go.
+		In the beginning was Symfony2. And it was good. There was Drupal as CMS but no real forum. Nor were there
+		applications that were intercompatible from the get-go.
 		
 		The main reason being that Symfony2 is mostly used as a base for highly customized applications.
 	\end{frame}
 	
 	\begin{frame}{Goal}
-		Deliver a web-platform that provides core community functionality similar to the WoltLab Community Framework (WCF) and central features that are desperately needed for every modern web application.	
+		Deliver a web-platform that provides core community functionality similar to the WoltLab Community Framework (WCF)
+		and central features that are desperately needed for every modern web application.
 	\end{frame}
 	
 	\begin{frame}{Core Features}
@@ -114,7 +116,6 @@
 			\item User and Group system
 			\item Package system
 			\item Style system
-			\item Project system
 		\end{itemize}
 	\end{frame}
 	
@@ -132,23 +133,23 @@
 			\end{tabular}
 		\end{table}
 		
-		\centering Why don't we use existing software?
+		\centering Why is existing software not always the solution?
 	\end{frame}
 	
 	\begin{frame}{Comparisons}
-		All these 3rdParty things are nice and such but...
+		These 3rdParty things are nice and such but...
 		\begin{itemize}
 			 \item<2-> they are not designed to interoperate seamlessly
 			 \item<3-> they are somewhat inflexible
 			 \item<4-> they don't fulfill our requirements
 		\end{itemize}
 		
-		\only<5->{If we have to invest time to make existing things working with our ideas, we might just as well do them from scratch exactly how we deem them necessary.}
+		\only<5->{Question is: Is it cheaper to develop from scratch or adjust existing solutions?}
 	\end{frame}
 	
 	\begin{frame}{Common Policy}
 		\begin{itemize}
-			\item seperate bundles
+			\item separate bundles
 			\item common core bundle
 			\item combined functionality
 		\end{itemize}
@@ -166,10 +167,13 @@
 		\begin{itemize}
 			\item bundles communicate via disclosed APIs only
 			\item no assumptions on the input that are not explicitely stated in API documentation
-			\item no primitive parameters in public APIs (instead value classes which encapsulate one value and ensure it's integrity and validity, e.g. Username, Password, Address)
+			\item no primitive parameters in public APIs (instead value classes which encapsulate one value and ensure
+			it's integrity and validity, e.g. Username, Password, Address)
 			\item explicit classes instead of array for everything (e.g. Queue, List, HashMap)
 		\end{itemize}
-		This common coding style ensures maximum maintainability and reduces the potential of errors (strings in unexpected and therefore unchecked variations, arrays in unexpected structure (the expected structure could be forgotten in the API documentation)).
+		This common coding style ensures maximum maintainability and reduces the potential of errors (strings in
+		unexpected and therefore unchecked variations, arrays in unexpected structure (the expected structure could be
+		forgotten in the API documentation)).
 	\end{frame}
 	
 	\subsection{Opportunities}
@@ -205,7 +209,9 @@
 		\end{itemize}
 	\end{frame}
 	\begin{frame}{Game Integration}
-		Due to it's modular nature the web platform could even support integration into an in-game and in-lore browser (as in HTTPS requests from the game to the website running on the platform). This would allow for including real websites into in-lore ``internet''s.
+		Due to it's modular nature the web platform could even support integration into an in-game and in-lore browser
+		(as in HTTPS requests from the game to the website running on the platform). This would allow for including real
+		websites into in-lore ``internet''s.
 	\end{frame}
 	
 	\section{Future}
@@ -214,7 +220,7 @@
 	\end{frame}
 	
 	\begin{frame}{Links}
-		\centering Contribute: www.2martens.de/web-platform
+		\centering Join us and contribute: 2martens.de
 	\end{frame}
 \end{document}
 
