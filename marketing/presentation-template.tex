@@ -9,7 +9,7 @@
 \usepackage{listings}
 \usepackage{color}
 \usetheme{Warsaw}
-\usecolortheme{crane} %TODO custom color theme to match the 2martens colours
+\usecolortheme{twomartens}
 \pagenumbering{arabic}
 \def\thesection{\arabic{section})}
 \def\thesubsection{\alph{subsection})}
@@ -20,6 +20,9 @@
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\definecolor{craneorange}{RGB}{61,61,61}
+\definecolor{craneblue}{RGB}{255,255,255}
 
 \lstset{ %
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
@@ -59,7 +62,21 @@
 \begin{document}
 \author{Jim 2martens}
 \title{Title}
-\date{Date}
+\date{\today}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\subsection{Motivation}
+\begin{frame}{Testtitle}
+    Test
+\end{frame}
 	
 \end{document}
 
