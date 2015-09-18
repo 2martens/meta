@@ -1,0 +1,249 @@
+\RequirePackage{pdf14}
+\documentclass{beamer}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage{paralist}
+%\useoutertheme{infolines} 
+\usepackage{lmodern,textcomp}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usetheme{Warsaw}
+\usecolortheme{twomartens}
+\pagenumbering{arabic}
+\def\thesection{\arabic{section})}
+\def\thesubsection{\alph{subsection})}
+\def\thesubsubsection{(\roman{subsubsection})}
+\setbeamertemplate{navigation symbols}{}
+\graphicspath{ {src/} {/home/jim/Pictures/} }
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\definecolor{craneorange}{RGB}{61,61,61}
+\definecolor{craneblue}{RGB}{255,255,255}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygray},    % comment style
+  deletekeywords={},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=PHP,                 % the language of the code
+  morekeywords={class, function, return, protected, public, private, const, static, new, extends, namespace, null},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mygreen},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\hypersetup{
+	pdfauthor=Jim Martens,
+	pdfstartview=Fit
+}
+
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\raggedleft \insertframenumber\,/\,\inserttotalframenumber\;}
+
+\begin{document}
+\author{Jim 2martens}
+\title{2martens Web Platform}
+\date{\today}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \tableofcontents
+\end{frame}
+
+\section{Einführung}
+\begin{frame}{Fragen...}
+  \begin{itemize}
+    \item Was?
+    \item Warum?
+    \item Wofür?
+    \item Wieviel?
+    \item Wann?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{...Antworten}
+  \begin{itemize}
+    \item Webplattform
+    \item gibt's so noch nicht, möchte ich haben
+    \item viele Dinge
+    \item 0€ + Freie Software
+    \item When it's done
+  \end{itemize}
+\end{frame}
+
+\section{Zeitlinie}
+\begin{frame}{Ursprung}
+  \begin{itemize}
+    \item lange Zeit mit Woltlab Community Framework (WCF) gearbeitet
+    \item unterstützt keine automatischen Tests
+    \item hat aber Paketsystem, Mehrsprachigkeit für usergenerierte Inhalte und Stylesystem
+    \item fehlende Dokumentation
+  \end{itemize}
+\end{frame}
+\begin{frame}{Ursprung}
+  \begin{itemize}
+    \item Symfony entdeckt
+    \item in vielen Punkten deutlich besser
+    \item Problem: kein Paketsystem, kein ACP, kein Stylesystem, keine Mehrsprachigkeit für usergenerierte Inhalte
+    \item Idee: das beste vom WCF mit der Power von Symfony kombinieren (Arbeitstitel: Symfony WCF)
+    \item das war Anfang 2014
+  \end{itemize}
+\end{frame}
+\begin{frame}{Recherche}
+  \begin{itemize}
+    \item Symfony hauptsächlich für Custom-Webseiten eingesetzt
+    \item keine Plattform vorhanden (z.B. Drupal nutzt Symfony, ist aber ein CMS)
+    \item einige Projekte hier und da, aber keines mit dem Ziel von mir
+  \end{itemize}
+\end{frame}
+\begin{frame}{Start}
+  \begin{itemize}
+    \item Ende Mai 2014: Namenswahl
+    \item PHPUnconf2014: Entscheidung nächstes Jahr etwas zeigen zu können
+    \item einzelne Orgacommits im Dezember 2014
+    \item März 2015: intensives Design der 2martens Web Platform, hauptsächlich des Core Bundles
+    \item seit dem Entwicklung in unregelmäßigen Abständen
+  \end{itemize}
+\end{frame}
+
+\section{Design}
+\subsection{High-level}
+\begin{frame}{Überblick}
+  \begin{itemize}
+    \item Core Bundle
+    \item Language Bundle
+    \item Content Bundle
+    \item Media Bundle
+    \item Upload Bundle
+    \item Mail Bundle
+    \item Frontend Essentials Bundle
+    \item Community Bundle
+    \item Poll Bundle
+    \item Conversation Bundle
+    \item Sanction Bundle
+  \end{itemize}
+\end{frame}
+\begin{frame}{Prinzip}
+  \begin{itemize}
+    \item alles außer Core Bundle optional
+    \item sog. Feature-Bundles können aber andere Feature-Bundles voraussetzen
+    \item jedes Feature Bundle implementiert einen Funktionsbereich umfassend
+    \item optionale Abhängigkeiten: z.B. Forum installiert ohne Poll Bundle;
+          Installation von Poll Bundle im ACP -> Umfragen jetzt im Forum möglich
+    \item Mix and match statt monolithische Riesenplattform
+    \item erweiterbar
+    \item storage agnostic, soweit möglich
+  \end{itemize}
+\end{frame}
+\subsection{Core Bundle}
+\begin{frame}{Überblick}
+  \begin{itemize}
+      \item ACP
+      \item Paketsystem
+      \item Optionssystem
+      \item User- und Gruppensystem
+      \item Stylesystem
+      \item Suchsystem
+      \item Menüsystem
+      \item ``Cronjob''system
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{ACP}
+  \begin{itemize}
+    \item funktionsfähiges ACP
+    \item erweiterbar
+    \item zusätzliche Bundles integrieren sich in ACP
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Paketsystem}
+  \begin{itemize}
+    \item basierend auf Composer
+    \item neue Bundles werden als Abhängigkeit zur Distribution hinzugefügt
+    \item daher kein eigenes Dependency Management
+    \item Composer-Plugin, um neue Bundles zu integrieren
+    \item Custom AppKernel, um dynamisch Bundle ergänzen zu können
+    \item Unterstützung für initiale Installation
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{User- und Gruppensystem}
+  \begin{itemize}
+    \item Gruppen sind weit mehr als Ansammlung von Roles
+    \item Gruppenoptionen über boolean-Werte hinaus
+    \item erweiterbar für neue Bundles
+    \item benutzt FOSUserBundle
+    \item einige systemrelevante Gruppen (admin, user, everyone)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Deep Dive Gruppenoptionen}
+  \begin{itemize}
+    \item Gruppenoptionen in .yml-Dateien persistiert (app/config/group/<group>.yml)
+    \item Boolean-Optionen werden ergänzend als Roles in der Gruppe in der Datenbank gespeichert
+    \item Optionen in drei Bereiche unterteilt: acp, mod, frontend
+    \item Roles setzen sich so zusammen: ROLE\_<AREA>\_<BUNDLE CATEGORY>\_<OPTION NAME>
+    \item z.B. ROLE\_ACP\_TWOMARTENS.CORE\_ACCESS
+    \item Role pro Gruppe (z.B. ROLE\_ADMIN für admin-Gruppe)
+    \item jede Gruppe hat publicName und roleName (z.B. Administrators und ADMIN)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Demo}
+  \centering
+  DEMO
+\end{frame}
+
+\section{Abschluss}
+\begin{frame}{Ausblick}
+  Ziel:
+  \begin{itemize}
+    \item Forum, CMS, ... in 2WP installiert
+    \item wirkt wie aus einem Guss
+    \item Verbesserungen an anwendungsunabhängigen Features betreffen alle
+    \item kein Vendor lock-in (Dateninkompatibilität)
+    \item hochqualitative Website ohne viel Geld und ohne Programmierkenntnisse aufsetzen können
+    \item flächendeckend bessere Websites mit ingesamt höheren Mindeststandards
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Kontakt}
+  \begin{itemize}
+    \item Website: 2martens.de
+    \item GitHub: github.com/2martens
+    \item Twitter: @2martens
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Q \& A}
+  \centering
+  Fragen...
+\end{frame}
+
+\end{document}
+
