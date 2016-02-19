@@ -6,9 +6,9 @@
 
 ## February
 * user and group system
-** finishing touches
-** documentation
-** functional tests
+    * finishing touches
+    * documentation
+    * functional tests
 * javascript dependency management
 
 ## March
