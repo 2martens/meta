@@ -117,7 +117,7 @@ Iterative scaling:
 These videos mean a lot of content and time. Therefore we won't start at 100%. Just like
 the website, this will be an iterative approach. The first step will be the monthly
 update section, since that is a perfect way for people stay tuned while not participating
-actively. If this section is succesful, we will have a reliable returning fellowship that
+actively. If this section is successful, we will have a reliable returning fellowship that
 might also go to the forum.
 
 Once we reach a critical quorum of interested people, we can scale this up with other
